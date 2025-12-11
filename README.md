@@ -26,29 +26,34 @@ The project was implemented using **Python** and the following libraries:
 * **Plotly (Express & Graph Objects)**: For creating interactive charts and Exploratory Data Analysis (EDA).
 * **Scikit-Learn**:
     * **Preprocessing**: `PowerTransformer`, `StandardScaler`, `OneHotEncoder`.
-    * **Models**: `GaussianNB` (Naive Bayes), `SVC`, `KNeighborsClassifier`.
+    * **Models**: `SVC` (SVM), `KNeighborsClassifier` (KNN), `GaussianNB` (Naive Bayes).
     * **Metrics**: `accuracy_score`, `confusion_matrix`.
 
 ## ⚙️ Methodology
 
 1.  **Exploratory Data Analysis (EDA)**:
-    * Understanding data distribution (Univariate Analysis) using histograms.
-    * Studying relationships between variables (Correlation Matrix).
-    * Analyzing the impact of different features on loan status.
-
+    * Understanding data distribution and studying relationships between variables (Correlation Matrix).
 2.  **Data Preprocessing**:
-    * Handling Missing Values.
-    * Converting categorical variables to numerical (Encoding).
-    * **Feature Scaling**: Using `Power Transformation` (Yeo-Johnson) to transform data to follow a **Normal Distribution**, significantly improving the performance of the Naive Bayes algorithm by addressing skewness.
-
+    * Handling missing values and encoding categorical data.
+    * Using **Power Transformation (Yeo-Johnson)** to improve data distribution and reduce skewness, ensuring better model performance.
 3.  **Modeling**:
-    * Splitting data into `Train` and `Test` sets (to prevent data leakage).
-    * Training a **Gaussian Naive Bayes** model.
-    * Experimenting with other algorithms for comparison (such as KNN and SVM).
+    * Splitting data into Training and Testing sets to prevent **Data Leakage**.
+    * Training three different models: SVM, KNN, and Naive Bayes.
 
-4.  **Evaluation**:
-    * Measuring model performance using **Accuracy Score**.
-    * Analyzing errors using the **Confusion Matrix**.
+## 📊 Model Results
+
+Three different models were trained and tested to evaluate their performance. The table below shows the final results:
+
+| Model | Training Accuracy | Testing Accuracy |
+| :--- | :---: | :---: |
+| **Support Vector Machine (SVM)** | **92.30%** | **92.08%** |
+| K-Nearest Neighbors (KNN) `n=5` | 93.25% | 90.18% |
+| Gaussian Naive Bayes | 81.05% | 80.85% |
+
+### 🏆 Selected Model
+Based on the results, the **SVM** model was selected as the final model for this project.
+* **Reason:** It achieved the **highest Testing Accuracy (92.08%)**.
+* It demonstrated excellent **Generalization**, with a very small gap between Training and Testing accuracy, indicating no overfitting issues compared to the KNN model.
 
 ## 🚀 How to Run
 1.  Install the required libraries:
@@ -56,14 +61,9 @@ The project was implemented using **Python** and the following libraries:
     pip install pandas numpy plotly scikit-learn
     ```
 2.  Open the `Loan_Approval_Classification.ipynb` file using Jupyter Notebook or Google Colab.
-3.  Ensure the data file `loan_data.csv` is in the same directory.
-4.  Run the cells sequentially to view the analysis and results.
-
-## 📊 Results
-* Data distribution was improved using `PowerTransformer` to overcome **Skewness**.
-* The Naive Bayes model showed promising results after proper data preprocessing (Training accuracy reached around 92%).
+3.  Ensure the data file is in the same directory and run the cells sequentially.
 
 ---
 
-## 👤 Author
+## ✍️ Author
 Developed by : Samir Mohamed
