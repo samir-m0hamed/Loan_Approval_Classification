@@ -53,7 +53,7 @@ Three different models were trained and tested to evaluate their performance. Th
 ### 🏆 Selected Model
 Based on the results, the **SVM** model was selected as the final model for this project.
 * **Reason:** It achieved the **highest Testing Accuracy (92.08%)**.
-* It demonstrated excellent **Generalization**, with a very small gap between Training and Testing accuracy, indicating no overfitting issues compared to the KNN model.
+* It demonstrated excellent **Generalization**, with a very small gap between Training and Testing accuracy, indicating no overfitting issues.
 
 ## 🚀 How to Run
 1.  Install the required libraries:
